@@ -22,9 +22,13 @@
             <p>Product description goes here. This is an example of a weekly discounted airsoft item on your website.</p>
             <p>Original Price: $XX.XX</p>
             <p>Discounted Price: $XX.XX</p>
-            <form action="checkout.php" method="post">
-                <input type="hidden" name="product_name" value="Product Name">
-                <input type="hidden" name="product_price" value="XX.XX">
+            <!-- Replace YOUR_PAYPAL_BUSINESS_EMAIL with your PayPal email -->
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="YOUR_PAYPAL_BUSINESS_EMAIL">
+                <input type="hidden" name="item_name" value="Product Name">
+                <input type="hidden" name="amount" value="XX.XX">
+                <input type="hidden" name="currency_code" value="USD">
                 <button type="submit">GIVE IT TO ME</button>
             </form>
         </div>
